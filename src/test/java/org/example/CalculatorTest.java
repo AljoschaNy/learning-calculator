@@ -52,4 +52,17 @@ class CalculatorTest {
         assertEquals(except,actual);
     }
 
+    @Test
+    void divide_whenNumber1Is8AndNumber2Is0_thenReturnFalse() {
+        //GIVEN
+        double number1 = 8;
+        double number2 = 0;
+        //WHEN
+        double actual = Calculator.divide(number1, number2);
+        //THEN
+        double except = 0;
+        assertTrue(actual == except);
+
+    }
+
 }

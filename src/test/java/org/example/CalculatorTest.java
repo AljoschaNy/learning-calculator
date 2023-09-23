@@ -65,4 +65,16 @@ class CalculatorTest {
 
     }
 
+    @Test
+    void getResultOfOperation_WhenUserChoiceIs1AndNum1Is5AndNum2Is6_thenReturn11(){
+        //GIVEN
+        int userInputForOperation = 1;
+        double number1 = 5;
+        double number2 = 6;
+        //WHEN
+        double actual = Calculator.getResultOfOperation(userInputForOperation, number1, number2);
+        //THEN
+        double expect = 11;
+        assertEquals(expect, actual);
+    }
 }

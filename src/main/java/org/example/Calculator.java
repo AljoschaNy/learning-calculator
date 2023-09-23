@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         userChoice();
-
     }
 
     public static void userChoice() {
@@ -20,10 +19,21 @@ public class Calculator {
         System.out.println("Bitte gebe Nummmer 2: ");
         double userInputNum2 = sc.nextDouble();
         sc.close();
-        System.out.println("User input operation = " + userInputForOperation);
-        System.out.println("User input num1 = " + userInputNum1);
-        System.out.println("User inout num2 = " + userInputNum2);
+    }
 
+    public static double getResultOfOperation(int userInputForOperation, double number1, double number2) {
+    if(userInputForOperation == 1){
+        return add(number1, number2);
+    } else if(userInputForOperation == 2){
+        return sub(number1, number2);
+    } else if(userInputForOperation == 3){
+        return multi(number1, number2);
+    } else if(userInputForOperation == 4){
+        return divide(number1, number2);
+    } else{
+        System.out.println("Eingabe inkorrekt!");
+        return 0.0;
+    }
     }
 
     public static double add(double number1, double number2) {

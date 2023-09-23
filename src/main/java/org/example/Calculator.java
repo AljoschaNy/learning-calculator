@@ -6,7 +6,6 @@ public class Calculator {
     public static void main(String[] args) {
         userChoice();
     }
-
     public static void userChoice() {
         System.out.println("Welche Rechenmethode möchten Sie verwenden?");
         System.out.println("Addieren=1, Subtrahieren=2, Multiplizieren=3, Dividieren=4");

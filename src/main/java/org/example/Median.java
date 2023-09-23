@@ -8,9 +8,7 @@ public class Median {
         int userArrayLength = getArrayLength(sc);
         int[] userArray = getArray(userArrayLength,sc);
         sc.close();
-        System.out.println(userArray[1]);
-        System.out.println(userArray[2]);
-        System.out.println(userArray[3]);
+        System.out.println("Median: " + getMedian(userArray));
     }
 
     public static int getArrayLength(Scanner scTest){
@@ -28,5 +26,13 @@ public class Median {
             numbersForMedian[i] = scTest.nextInt();
         }
         return numbersForMedian;
+    }
+
+    public static int getMedian(int[] arr){
+        int sum = 0;
+        for(int number : arr){
+            sum += number;
+        }
+        return sum/arr.length;
     }
 }

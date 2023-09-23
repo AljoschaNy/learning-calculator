@@ -12,6 +12,19 @@ public class Calculator {
         System.out.println("Addieren=1, Subtrahieren=2, Multiplizieren=3, Dividieren=4");
         Scanner sc = new Scanner(System.in);
         int userInputForOperation = sc.nextInt();
+        boolean correctUserInput = false;
+
+        if(userInputForOperation>0 && userInputForOperation<5) {
+            correctUserInput = true;
+        }
+
+        while(!correctUserInput) {
+            System.out.println("Eingabe inkorrekt! Bitte wähle neu");
+            userInputForOperation = sc.nextInt();
+            if(userInputForOperation>0 && userInputForOperation<5) {
+                correctUserInput = true;
+            }
+        }
 
         System.out.println("Bitte gebe Nummmer 1: ");
         double userInputNum1 = sc.nextDouble();
@@ -19,6 +32,9 @@ public class Calculator {
         System.out.println("Bitte gebe Nummmer 2: ");
         double userInputNum2 = sc.nextDouble();
         sc.close();
+
+        double result = getResultOfOperation(userInputForOperation,userInputNum1,userInputNum2);
+        System.out.println(result);
     }
 
     public static double getResultOfOperation(int userInputForOperation, double number1, double number2) {

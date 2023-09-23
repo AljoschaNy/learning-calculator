@@ -28,5 +28,16 @@ class CalculatorTest {
         double expect = 3;
         assertEquals(expect,actual);
     }
+    @Test
+    void multi_whenNumber1Is3AndNumber2Is4_thenReturn12 (){
+        //GIVEN
+        double number1 = 3;
+        double number2 = 4;
+        //WHEN
+        double actual = Calculator.multi(number1,number2);
+        //THEN
+        double expect = 12;
+        assertEquals(expect,actual);
+    }
 
 }

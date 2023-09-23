@@ -40,4 +40,16 @@ class CalculatorTest {
         assertEquals(expect,actual);
     }
 
+    @Test
+    void divide_whenNumber1Is8AndNumber2Is2_thenReturn4() {
+        //GIVEN
+        double number1 = 8;
+        double number2 = 2;
+        //WHEN
+        double actual = Calculator.divide(number1, number2);
+        //THEN
+        double except = 4;
+        assertEquals(except,actual);
+    }
+
 }
